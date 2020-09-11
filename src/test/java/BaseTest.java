@@ -17,6 +17,8 @@ public class BaseTest {
     @Before
     public void setUp() throws Exception {
         driver = new ChromeDriver();
+        driver.manage().deleteAllCookies();
+        driver.manage().window().maximize();
     }
 
     @After
