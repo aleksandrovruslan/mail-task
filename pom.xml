@@ -22,6 +22,9 @@
         <junit.version>4.12</junit.version>
         <webdrivermanager.version>4.2.0</webdrivermanager.version>
         <slf4j-simple.version>1.7.30</slf4j-simple.version>
+        <prop.email>user@mail.ru</prop.email>
+        <prop.password>password</prop.password>
+        <prop.browser>chrome</prop.browser>
     </properties>
 
     <dependencies>
@@ -55,6 +58,15 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources/</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>app.properties</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
